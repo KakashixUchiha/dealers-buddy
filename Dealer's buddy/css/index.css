@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    background-color: lightgreen;
+}
+.box{
+    position: absolute;
+    top:  483px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 40px;
+    background: rgba(255,255,255,.8);
+    box-sizing: border-box;
+}
+.box .inputbox b{
+    margin: 0 0 50px;
+    padding: 0;
+    color: green;
+    text-align: center;
+}
+.box .inputbox{
+    position: relative;
+}
+.box .inputbox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+}
+.box .inputbox textarea{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+}
+.box .inputbox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: green;
+    pointer-events: none;
+    transition: .5s;
+}
+.box .inputbox input:valid~label,
+.box .inputbox input:focus~label{
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+}
+.box .inputbox textarea:valid~label,
+.box .inputbox textarea:focus~label{
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+}
+.box button{
+    background: transparent;
+    outline: none;
+    background: green;
+    color: #fff;
+    border: solid #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px
+}
+nav{
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    font-size: 30px
+}
+a:link{
+    color: black;
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}

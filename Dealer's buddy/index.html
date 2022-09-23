@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript">
+function inp() {
+    var p = document.getElementById("phn").value;
+    localStorage.setItem("Name'"+p+"'",document.getElementById("name").value);
+    localStorage.setItem("Phn'"+p+"'",document.getElementById("phn").value);
+    localStorage.setItem("Adds'"+p+"'",document.getElementById("adds").value);
+    localStorage.setItem("Cmp'"+p+"'",document.getElementById("cmp").value);
+    localStorage.setItem("Veh'"+p+"'",document.getElementById("veh").value);
+    localStorage.setItem("Modl'"+p+"'",document.getElementById("modl").value);
+    localStorage.setItem("Col'"+p+"'",document.getElementById("col").value);
+    localStorage.setItem("Pda'"+p+"'",document.getElementById("pda").value);
+    localStorage.setItem("Toa'"+p+"'",document.getElementById("toa").value);
+    var pd=document.getElementById("pda").value;
+    var t=document.getElementById("toa").value;
+    localStorage.setItem("Bla'"+p+"'",(t-pd));
+    localStorage.setItem("ref",p);
+    document.getElementById("name").value = "";
+    document.getElementById("phn").value = "";
+    document.getElementById("adds").value = "";
+    document.getElementById("cmp").value = "";
+    document.getElementById("veh").value = "";
+    document.getElementById("modl").value = "";
+    document.getElementById("col").value = "";
+    document.getElementById("pda").value = "";
+    document.getElementById("toa").value = "";
+    window.location="p.html";
+}
+</script>
+<title>Bill</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Bill</a>&nbsp;&nbsp;&nbsp;<a href="det.html">Details</a>
+        </nav>
+    </header>
+    <div class="box">
+        <b>Customer details:</b><br><br>
+        <div class="inputbox">
+        <input type="text" id="name" required=""><label>Name</label><br>
+    </div>
+        <div class="inputbox">
+        <input type="text" id="phn" required=""><label>Mobile no</label><br>
+    </div>
+        <div class="inputbox">
+        <textarea id="adds" required=""></textarea><label>Address</label><br><br>
+    </div>
+        <b>Vehicle details:</b><br><br>
+        <div class="inputbox">
+        <input type="text" id="cmp" required=""><label>Company</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="veh" required=""><label>Vehicle</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="modl" required=""><label>Model</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="col" required=""><label>Colour</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="pda" required=""><label>Paid Amount</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="toa" required=""><label>Total Amount</label><br>
+    </div>
+        <button onclick="inp()">Save</button>
+</div>
+    </body>
+</html>

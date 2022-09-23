@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>print</title>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript">
+		function show() {
+			var p = (localStorage.getItem("ref"));
+ 			document.getElementById('na').innerHTML=(localStorage.getItem("Name'"+p+"'"));
+ 			document.getElementById('ad').innerHTML=(localStorage.getItem("Adds'"+p+"'"));
+ 			document.getElementById('com').innerHTML=(localStorage.getItem("Cmp'"+p+"'"));
+ 			document.getElementById('ve').innerHTML=(localStorage.getItem("Veh'"+p+"'"));
+ 			document.getElementById('mod').innerHTML=(localStorage.getItem("Modl'"+p+"'"));
+ 			document.getElementById('col').innerHTML=(localStorage.getItem("Col'"+p+"'"));
+ 			document.getElementById('pd').innerHTML=(localStorage.getItem("Pda'"+p+"'"));
+ 			document.getElementById('bl').innerHTML=(localStorage.getItem("Bla'"+p+"'"));
+ 			document.getElementById('to').innerHTML=(localStorage.getItem("Toa'"+p+"'"));
+		}
+	</script>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			background-image: url("img/dbb.png");
+			background-position: center center;
+			background-repeat: no-repeat; 
+			background-size: 50%;
+		}
+		.head{
+			text-align: center; 
+		}
+	</style>
+
+</head>
+<body onload="show()">
+	<div>
+	<div class="head">
+		<img src="img/db.png"><b style="font-size: 50px">Motors</b></div><b>CONTACT:-<i>9876543210</i> <br>ADDRESS:-<i>DB Motors Shop no:7 Kalpak, <br>Wadala Antop Hill Mumbai:400037 </i></b><br><br><br><br>
+		<div>
+		<b>Name: </b><i id="na"></i><br>
+		<b>Address: </b><i id="ad"></i><br><br>
+		<b>Vehicle: </b><i id="com"></i>,&nbsp;<i id="ve"></i>,&nbsp;<i id="mod"></i>,&nbsp;<i id="col"></i><br>
+		<br><br><br>
+		<b>Paid Amount: </b><i id="pd"></i><br>
+		<b>Balance Amount: </b><i id="bl"></i><br>
+		<div style="text-align: right;"><b>Total Amount: </b><i id="to"></i></div><br><br><br><br><br><br><br>
+		<div style="text-align: center;"><b>NOTE:</b><i> note will be printed if any wanted by dealer</i></div>
+	</div>
+</div>
+</body>
+</html>

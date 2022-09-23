@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update</title>
+    <script type="text/javascript">
+        function up() {
+            var p = document.getElementById("phn").value;
+            var n =(localStorage.getItem("Name'"+p+"'"));
+            if(n!=""){
+                var nam = document.getElementById("name").value;
+                var add = document.getElementById("adds").value;
+                var com = document.getElementById("cmp").value;
+                var vehi = document.getElementById("veh").value;
+                var mod = document.getElementById("modl").value;
+                var colr = document.getElementById("col").value;
+                var pad = document.getElementById("pda").value;
+                var tot = document.getElementById("toa").value;
+                if(nam==""){
+                    nam = (localStorage.getItem("Name'"+p+"'"));
+                };
+                if(add==""){
+                    add = (localStorage.getItem("Adds'"+p+"'"));
+                };
+                if(com==""){
+                    com = (localStorage.getItem("Cmp'"+p+"'"));
+                };
+                if(vehi==""){
+                    vehi = (localStorage.getItem("Veh'"+p+"'"));
+                };
+                if(mod==""){
+                    mod = (localStorage.getItem("Modl'"+p+"'"));
+                };
+                if(colr==""){
+                    colr = (localStorage.getItem("Col'"+p+"'"));
+                };
+                if(pad==""){
+                    pad = (localStorage.getItem("Pda'"+p+"'"));
+                };
+                if(tot==""){
+                    tot = (localStorage.getItem("Toa'"+p+"'"));
+                };
+                var bal=tot-pad;
+                localStorage.setItem("Name'"+p+"'",nam);
+                localStorage.setItem("Adds'"+p+"'",add);
+                localStorage.setItem("Cmp'"+p+"'",com);
+                localStorage.setItem("Veh'"+p+"'",vehi);
+                localStorage.setItem("Modl'"+p+"'",mod);
+                localStorage.setItem("Col'"+p+"'",colr);
+                localStorage.setItem("Pda'"+p+"'",pad);
+                localStorage.setItem("Bla'"+p+"'",bal);
+                localStorage.setItem("Toa'"+p+"'",tot);
+                alert('Values updated');
+            }else{
+                alert('No such customer exists with mobile no:-'+p);
+            }
+            document.getElementById("name").value = "";
+            document.getElementById("phn").value = "";
+            document.getElementById("adds").value = "";
+            document.getElementById("cmp").value = "";
+            document.getElementById("veh").value = "";
+            document.getElementById("modl").value = "";
+            document.getElementById("col").value = "";
+            document.getElementById("pda").value = "";
+            document.getElementById("toa").value = "";
+        }
+    </script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<style type="text/css">
+		.box{
+			top: 518px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+        <nav>
+        	<a href="index.html">Bill</a>&nbsp;&nbsp;&nbsp;<a href="det.html">Details</a><br>
+            <a href="show.html" style="font-size: 20px;">Show</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="update.html" style="font-size: 20px;">Update</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="del.html" style="font-size: 20px;">Delete</a>
+        </nav>
+    </header>
+	<div class="box">
+		<b>Reference:</b><br><br>
+		<div class="inputbox">
+        <input type="text" id="phn" required=""><label>Mobile no</label><br><br>
+    </div>
+    <b>Enter details to update:</b><br><br>
+        <div class="inputbox">
+        <input type="text" id="name" required=""><label>Name</label><br>
+    </div>
+        <div class="inputbox">
+        <textarea id="adds" required=""></textarea><label>Address</label><br>
+    </div>
+        <div class="inputbox">
+        <input type="text" id="cmp" required=""><label>Company</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="veh" required=""><label>Vehicle</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="modl" required=""><label>Model</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="col" required=""><label>Colour</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="pda" required=""><label>Paid Amount</label><br>
+    </div>
+    <div class="inputbox">
+        <input type="text" id="toa" required=""><label>Total Amount</label><br>
+    </div>
+        <button onclick="up()">Update</button>
+</div>
+</body>
+</html>

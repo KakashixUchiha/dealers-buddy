@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+    <script type="text/javascript">
+        function show() {
+            var p = document.getElementById("phn").value;
+            var n =(localStorage.getItem("Name'"+p+"'"));
+            if(n!=""){
+                document.getElementById('na').innerHTML=(localStorage.getItem("Name'"+p+"'"));
+                document.getElementById('ad').innerHTML=(localStorage.getItem("Adds'"+p+"'"));
+                document.getElementById('com').innerHTML=(localStorage.getItem("Cmp'"+p+"'"));
+                document.getElementById('ve').innerHTML=(localStorage.getItem("Veh'"+p+"'"));
+                document.getElementById('mod').innerHTML=(localStorage.getItem("Modl'"+p+"'"));
+                document.getElementById('col').innerHTML=(localStorage.getItem("Col'"+p+"'"));
+                document.getElementById('pd').innerHTML=(localStorage.getItem("Pda'"+p+"'"));
+                document.getElementById('bl').innerHTML=(localStorage.getItem("Bla'"+p+"'"));
+                document.getElementById('to').innerHTML=(localStorage.getItem("Toa'"+p+"'"));
+            }else{
+                alert('No data found');
+            }
+            document.getElementById('box').style.top="407px";
+        }
+    </script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<style type="text/css">
+		.box{
+			top: 397px;
+		}
+        label{
+            color: darkgreen;
+        }
+	</style>
+</head>
+<body>
+	<header>
+        <nav>
+        	<a href="index.html">Bill</a>&nbsp;&nbsp;&nbsp;<a href="det.html">Details</a><br>
+            <a href="show.html" style="font-size: 20px;">Show</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="update.html" style="font-size: 20px;">Update</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="del.html" style="font-size: 20px;">Delete</a>
+        </nav>
+    </header>
+   	<div class="box" id="box">
+		<b>Reference:</b><br><br>
+		<div class="inputbox">
+        <input type="text" id="phn" required=""><label>Mobile no</label><br>
+        <button onclick="show()">Fetch</button>
+        <br><br>
+    </div>
+    <b>Customer details:</b><br><br>
+    <b><label>Name: </label><i id="na"></i></b><br><br>
+    <b><label>Address: </label><i id="ad"></i></b><br><br>
+    <b><label>Company: </label><i id="com"></i></b><br><br>
+    <b><label>Vehicle: </label><i id="ve"></i></b><br><br>
+    <b><label>Model: </label><i id="mod"></i></b><br><br>
+    <b><label>Colour: </label><i id="col"></i></b><br><br>
+    <b><label>Paid Amount: </label><i id="pd"></i></b><br><br>
+    <b><label>Balance Amount: </label><i id="bl"></i></b><br><br>
+    <b><label>Total Amount: </label><i id="to"></i></b><br><br>
+</div>
+</div>
+</body>
+</html>
